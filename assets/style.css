@@ -13,33 +13,27 @@
 html{
     scroll-behavior: smooth;
 }
-
 * {
     font-family: 'Arvo', serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 body{
     background: url(./texture.jpg) no-repeat fixed center ;
     background-size: 1400px 800px;
 }
-
 .header {
     background-color: var(--color-bg);
     font-family: 'Sintony', sans-serif;
     margin:0;
     display: flex;
 }
-
 .nav{
     width:fit-content ;
     margin-bottom: 50px;
     position:sticky;
 }
-
-
 .nav-item{
     text-align: center;
     padding: 10px;
@@ -56,21 +50,26 @@ body{
     justify-content: center;
     color:var(--color-font);
 }
+.pic h1{
+    font-size:x-large;
+}
 .pic p{
     font-weight: 300px;
     margin-top:20px;
+    font-size: small;
 }
 .pic h3{
     text-align: center;
     margin-top: 50px;
     font-style: oblique;
+    font-size: medium;
 }
 .nav-item:hover{
     background-color: var(--color-line);
 }
 .profile{
-    width: 200px;
-    height: 200px;
+    width: 130px;
+    height: 130px;
     margin: 0;
     padding: 0;
     border-radius: 50%;
@@ -82,7 +81,7 @@ body{
     text-shadow: 3px 3px 2px black;
 }
 .container{
-    margin: 0 111px 0 111px;
+    margin: 0 10% 0 10%;
 }
 .contact{
     text-align:center;
@@ -99,9 +98,13 @@ body{
     justify-content: center;
     align-items: center;
     background-color:gray;
-    width: 80px;
-    height: 80px;
     border-radius: 50%;
+    width: 40px;
+    height: 30px;
+}
+.sosmed-logo img{
+    width: 25px;
+    height: 25px;
 }
 .bio{ 
     margin-top: 50px;
@@ -120,12 +123,11 @@ body{
 }
 .card{
     margin: 15px 20px;
-    padding : 15px;
     background-color: var(--color-font);
     border-radius: 20px;
     box-shadow : 3px 3px 8px grey;
     word-spacing: 4px;
-
+    padding : 15px 0px;
 }
 .head-card{
     display: flex;
@@ -134,11 +136,12 @@ body{
 .card table,tr,td{
     padding: 5px;
 }
+/* style bagian edukasi */
 .edu{
     margin-top: 50px;
 }
 .container-edu{
-    padding: 50px 0;
+    padding: 20px 0;
     font-family: 'Montserrat',sans-serif;
     min-height: 100vh;
     width: 100%;
@@ -162,64 +165,17 @@ body{
     color : var(--color-bg);
     border-radius : 20px;
     box-shadow : 3px 3px 8px grey;
-    width: 50%;
+    width: 100%;
     margin-bottom : 50px;
     position: relative;
 }
-.timeline ul li:last-child{
-    margin-bottom : 0 ;
-}
-.timeline-content h4{
-    font-size : 15px;
-    font-weight : 800;
-    line-height : 30px;
-    margin-bottom:10px;
+.timeline-content{
     text-align: center;
 }
 .timeline-content p{
     font-size: 20px;
     line-height: 30px;
     font-weight: 300;
-    text-align: center;
-}
-.timeline ul li:nth-child(odd){
-    float :left;
-    clear: right;
-    transform: translateX(-20px);
-}
-.timeline ul li:nth-child(even){
-    float :right;
-    clear: left;
-    transform: translateX(20px);
-}
-.timeline::before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 2px;
-    background-color: var(--color-line);
-    left: 50%;
-    transform: translateX(-50%);
-}
-.timeline ul li::after{
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background-color: var(--color-line);
-    border-radius: 50%;
-    top: 0;
-}
-.timeline ul li:nth-child(odd)::after{
-    transform:translate(50%,-50%);
-    right: -20px;
-}
-.timeline ul li:nth-child(even)::after{
-    transform:translate(-50%,-50%);
-    left: -20px;
-}
-.timeline ul li:hover::after{
-    background-color: var(--color-bg);
 }
 .s-card{
     display: flex;
@@ -247,27 +203,92 @@ body{
 }
 
 
-@media only screen and (max-width: 600px) {
-    
-    .profile{
-        width: 130px;
-        height: 130px;
-    }
+@media only screen and (min-width: 600px) {
+    /* Untuk Dekstop */
     .pic h1{
-        font-size:x-large;
+        font-size: xx-large;
     }
     .pic p{
-        font-size: small;
+        font-size: large;
     }
     .pic h3{
-        font-size: medium;
+        font-size: larger;
     }
     .sosmed-logo{
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
     }
     .sosmed-logo img{
-        width: 35px;
-        height: 35px;
+        width: 50px;
+        height: 50px;
+    } 
+    .profile{
+        width: 200px;
+        height: 200px;
+    } 
+    .card{
+        padding : 15px;
     }
+    .container-edu{
+        padding: 50px 0;
+    }
+    .timeline ul li{
+        width:50%;
+    }
+    .timeline ul li:last-child{
+    margin-bottom : 0 ;
+    }
+    .timeline-content h4{
+        font-size : 15px;
+        font-weight : 800;
+        line-height : 30px;
+        margin-bottom:10px;
+        text-align: center;
+    }
+    .timeline-content p{
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 300;
+        text-align: center;
+    }
+    .timeline ul li:nth-child(odd){
+        float :left;
+        clear: right;
+        transform: translateX(-20px);
+    }
+    .timeline ul li:nth-child(even){
+        float :right;
+        clear: left;
+        transform: translateX(20px);
+    }
+    .timeline::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        background-color: var(--color-line);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline ul li::after{
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: var(--color-line);
+        border-radius: 50%;
+        top: 0;
+    }
+    .timeline ul li:nth-child(odd)::after{
+        transform:translate(50%,-50%);
+        right: -20px;
+    }
+    .timeline ul li:nth-child(even)::after{
+        transform:translate(-50%,-50%);
+        left: -20px;
+    }
+    .timeline ul li:hover::after{
+        background-color: var(--color-bg);
+    }
+   
   }
