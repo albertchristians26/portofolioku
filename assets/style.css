@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@0;1&family=Sintony&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,300&display=swap');
+
+:root {
+    --color-bg : #3E3E3B ;
+    --color-font : #EBECED ;
+    --color-secondary : #143a80 ;
+    --color-line : #A2AAB0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Arvo', serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(./texture.jpg) no-repeat fixed center ;
+    background-size: 1400px 800px;
+}
+
+.header {
+    background-color: var(--color-bg);
+    font-family: 'Sintony', sans-serif;
+    margin:0;
+    display: flex;
+}
+
+.nav{
+    width:fit-content ;
+    margin-bottom: 50px;
+    position:sticky;
+}
+
+
+.nav-item{
+    text-align: center;
+    padding: 10px;
+}
+.pic{
+    width: 100%;
+    background:  url(./Work2.jpg) rgba(0, 0, 0, 0.4) no-repeat;
+    background-size: fixed;
+    background-position-x: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:var(--color-font);
+}
+.pic p{
+    font-weight: 300px;
+    margin-top:20px;
+}
+.pic h3{
+    text-align: center;
+    margin-top: 50px;
+    font-style: oblique;
+}
+.nav-item:hover{
+    background-color: var(--color-line);
+}
+.profile{
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    margin: 5px;
+}
+.nav a{
+    text-decoration: none;
+    color: var(--color-font);
+    text-shadow: 3px 3px 2px black;
+}
+.container{
+    margin: 0 111px 0 111px;
+}
+.contact{
+    text-align:center;
+    margin-top: 50px;
+}
+.sosmed{
+    display:flex;
+    justify-content:center;
+    margin-top: 10px;
+}
+.sosmed-logo{
+    margin: 0 20px 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:gray;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.bio{ 
+    margin-top: 50px;
+}
+.sub-title{
+    text-align: center;
+}
+.line{
+    height: 3px;
+    margin: 16px 0;
+    background-color: var(--color-line);
+}
+.f-card{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    margin: 15px 20px;
+    padding : 15px;
+    background-color: var(--color-font);
+    border-radius: 20px;
+    box-shadow : 3px 3px 8px grey;
+    word-spacing: 4px;
+
+}
+.head-card{
+    display: flex;
+    justify-content:center;
+}
+.card table,tr,td{
+    padding: 5px;
+}
+.edu{
+    margin-top: 50px;
+}
+.container-edu{
+    padding: 50px 0;
+    font-family: 'Montserrat',sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timeline{
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative ;
+}
+.timeline ul{
+    list-style: none;
+}
+.timeline ul li{
+    padding: 20px;
+    background-color: var(--color-font);
+    color : var(--color-bg);
+    border-radius : 20px;
+    box-shadow : 3px 3px 8px grey;
+    width: 50%;
+    margin-bottom : 50px;
+    position: relative;
+}
+.timeline ul li:last-child{
+    margin-bottom : 0 ;
+}
+.timeline-content h4{
+    font-size : 15px;
+    font-weight : 800;
+    line-height : 30px;
+    margin-bottom:10px;
+    text-align: center;
+}
+.timeline-content p{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+    text-align: center;
+}
+.timeline ul li:nth-child(odd){
+    float :left;
+    clear: right;
+    transform: translateX(-20px);
+}
+.timeline ul li:nth-child(even){
+    float :right;
+    clear: left;
+    transform: translateX(20px);
+}
+.timeline::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: var(--color-line);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.timeline ul li::after{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: var(--color-line);
+    border-radius: 50%;
+    top: 0;
+}
+.timeline ul li:nth-child(odd)::after{
+    transform:translate(50%,-50%);
+    right: -20px;
+}
+.timeline ul li:nth-child(even)::after{
+    transform:translate(-50%,-50%);
+    left: -20px;
+}
+.timeline ul li:hover::after{
+    background-color: var(--color-bg);
+}
+.s-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.body-card{
+    display: flex;
+    align-items: center;
+    font-size:18px;
+    line-height: 30px;
+    margin-top: 20px;
+    width: 180px;
+    height: 140px;
+    text-align: center;
+}
+.footer{
+    padding-top: 25px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-bg);
+    font-size: 13px;
+    color: var(--color-font);
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    .profile{
+        width: 130px;
+        height: 130px;
+    }
+    .pic h1{
+        font-size:x-large;
+    }
+    .pic p{
+        font-size: small;
+    }
+    .pic h3{
+        font-size: medium;
+    }
+    .sosmed-logo{
+        width: 50px;
+        height: 50px;
+    }
+    .sosmed-logo img{
+        width: 35px;
+        height: 35px;
+    }
+  }
