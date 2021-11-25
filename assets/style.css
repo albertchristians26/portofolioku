@@ -223,7 +223,38 @@ body{
     list-style-type: none;
 }
 .porto{
-    margin-top:50px;
+    margin: 50px 0px;
+}
+.card-porto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-font);
+    border-radius: 10px;
+    box-shadow : 3px 3px 8px grey;
+    word-spacing: 4px;
+    max-width: 350px;
+    margin: 15px 20px;
+}
+.card-head-porto img{
+    border-radius: 10px;
+    width: 100%;
+}
+.card-body-porto{
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.card-body-porto button{
+    border: solid 1px var(--color-line);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.card-body-porto button:hover{
+    background-color: var(--color-bg);
+    color: var(--color-font);
 }
 .footer{
     padding-top: 25px;
